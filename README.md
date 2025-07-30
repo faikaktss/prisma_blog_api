@@ -658,3 +658,5 @@ Bu projenin geliştirilmesinde kullanılan açık kaynak teknolojilere ve toplul
 ⭐ Eğer bu proje işinize yaradıysa, lütfen bir **star** verin!
 
 📅 **Son güncelleme**: 30 Temmuz 2025
+#   p r i s m a _ b l o g _ a p i  
+ 
