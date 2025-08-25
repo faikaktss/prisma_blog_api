@@ -98,20 +98,4 @@ Düzenle
 | **Tag** | `id` (PK), `name` | Gönderilere çapraz etiketleme | N Tag → N Post (PostTag) |
 | **PostTag** | `post_id` (FK), `tag_id` (FK) | Gönderi-etiket ilişkisi | Many-to-Many: Post ↔ Tag |
 
-**Şematik Görünüm:**
 
-Category
-│ 1
-▼
-Post ──< PostTag >── Tag
-│
-▼
-Comment
-
-yaml
-Kopyala
-Düzenle
-
----
-
-#
