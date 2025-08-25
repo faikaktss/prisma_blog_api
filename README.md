@@ -122,28 +122,8 @@ Düzenle
 - PostgreSQL v15+  
 - npm veya yarn  
 
-### Adımlar
-
-```bash
-git clone https://github.com/kullaniciadi/prisma-blog-api.git
-cd prisma-blog-api
-npm install
-cp .env.example .env
-.env dosyasını düzenleyin:
-
-env
-Kopyala
-Düzenle
-DATABASE_URL="postgresql://username:password@localhost:5432/database_name"
-PORT=3000
-NODE_ENV=development
-bash
-Kopyala
-Düzenle
-npx prisma migrate dev --name init
-npx prisma generate
-npm run dev
 🎮 Kullanım
+
 Sunucu http://localhost:3000 üzerinde çalışır.
 Postman veya tarayıcı ile endpointleri test edebilirsiniz.
 
@@ -154,49 +134,31 @@ Kategoriler	POST	/api/categories	✅
 Gönderiler	GET	/api/posts	🚧 Geliştiriliyor
 Etiketler	GET	/api/tags	🚧 Geliştiriliyor
 Yorumlar	GET	/api/comments	🚧 Geliştiriliyor
-
 🔍 Filtreleme
-http
-Kopyala
-Düzenle
 GET /api/posts?showDeleted=active&status=published&category=1&tags=2,5
+
 Parametre	Açıklama
 showDeleted	true / false / active
 status	published / draft / all
 category	Kategori ID
 tags	Etiket ID’leri (OR mantığı)
-
 📝 Örnek JSON İstekleri
+
 Yeni Kategori:
 
-h
-Kopyala
-Düzenle
 POST /api/categories
 Content-Type: application/json
 
 {
   "name": "Teknoloji"
 }
+
+
 Yanıt:
 
-json
-Kopyala
-Düzenle
 {
   "id": 1,
   "name": "Teknoloji",
   "created_at": "2025-08-25T10:30:00Z",
   "deleted_at": null
 }
-🗂 Proje Yapısı
-arduino
-Kopyala
-Düzenle
-📁 src/
-├── config/
-├── controllers/
-├── models/
-├── routers/
-├── generated/
-└── app.ts
