@@ -1,30 +1,30 @@
 # 🌟 BE-6442P Blog Yönetim API
 
-![Node.js](https://img.shields.io/badge/Node.js-v18+-green)
-![TypeScript](https://img.shields.io/badge/TypeScript-v5+-blue)
-![Express](https://img.shields.io/badge/Express.js-v4+-lightgrey)
-![Prisma](https://img.shields.io/badge/Prisma-v5+-purple)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-v15+-blue)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![Node.js](https://img.shields.io/badge/Node.js-v18+-green?style=flat-square)
+![TypeScript](https://img.shields.io/badge/TypeScript-v5+-blue?style=flat-square)
+![Express](https://img.shields.io/badge/Express.js-v4+-lightgrey?style=flat-square)
+![Prisma](https://img.shields.io/badge/Prisma-v5+-purple?style=flat-square)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-v15+-blue?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
 
-> Modern blog yönetim sistemi için geliştirilmiş RESTful API. TypeScript, Express.js, Prisma ORM ve PostgreSQL kullanılarak MVC mimarisi ile geliştirilmiştir.
+> Profesyonel bir blog yönetim sistemi RESTful API’si. TypeScript, Express.js, Prisma ORM ve PostgreSQL ile MVC mimarisi kullanılarak geliştirilmiştir.
 
 ---
 
-## 📋 İçindekiler
+## 📌 İçindekiler
 
 - [🎯 Proje Hakkında](#-proje-hakkında)
 - [✨ Özellikler](#-özellikler)
-- [🛠️ Teknolojiler](#️-teknolojiler)
-- [🏗️ Mimari](#️-mimari)
+- [🛠 Teknolojiler](#-teknolojiler)
+- [🏗 Mimari](#-mimari)
 - [📊 Veritabanı İlişkileri](#-veritabanı-ilişkileri)
 - [🚀 Kurulum](#-kurulum)
-- [⚙️ Yapılandırma](#️-yapılandırma)
+- [⚙️ Yapılandırma](#-yapılandırma)
 - [🎮 Kullanım](#-kullanım)
 - [📡 API Endpoints](#-api-endpoints)
 - [🔍 Filtreleme](#-filtreleme)
 - [📝 Örnek İstekler](#-örnek-i̇stekler)
-- [🗂️ Proje Yapısı](#️-proje-yapısı)
+- [🗂 Proje Yapısı](#-proje-yapısı)
 - [🤝 Katkıda Bulunma](#-katkıda-bulunma)
 - [📄 Lisans](#-lisans)
 
@@ -32,54 +32,55 @@
 
 ## 🎯 Proje Hakkında
 
-BE-6442P, modern blog sistemleri için geliştirilmiş kapsamlı bir **backend API**’dir.  
-Kategoriler, blog gönderileri, yorumlar ve etiketler arasında ilişkiler kurabilen, gelişmiş filtreleme özellikleri sunan profesyonel bir çözüm sağlar.
+BE-6442P, modern blog sistemleri için geliştirilmiş **backend API** çözümüdür.  
+Kategoriler, blog gönderileri, yorumlar ve etiketler arasında ilişkiler kurabilir, gelişmiş filtreleme ile yönetimi kolaylaştırır.
 
-**Temel Konseptler:**
-- 🏷️ **Kategoriler:** Blog yazılarını organize etmek için  
-- 📝 **Gönderiler:** Ana blog içerikleri (taslak/yayınlanmış)  
-- 💬 **Yorumlar:** Kullanıcı yorumları  
-- 🏷️ **Etiketler:** Gönderilere çapraz etiketleme (Many-to-Many)
+**Temel Modüller:**
+
+- 🏷 **Kategoriler**: Blog gönderilerini sınıflandırmak için  
+- 📝 **Gönderiler**: Ana blog içerikleri (taslak/yayınlanmış)  
+- 💬 **Yorumlar**: Gönderi yorumları  
+- 🏷 **Etiketler**: Gönderilere çapraz etiketleme (Many-to-Many)
 
 ---
 
 ## ✨ Özellikler
 
-- 🏷️ Many-to-Many etiketleme sistemi  
-- 🗑️ Soft Delete (güvenli veri silme)  
+- 🏷 Many-to-Many etiketleme sistemi  
+- 🗑 Soft Delete ile güvenli veri silme  
 - 📊 Çoklu filtreleme (kategori, etiket, durum)  
-- 🔍 Dinamik ve optimize edilmiş sorgular (Prisma ORM)  
+- 🔍 Prisma ORM ile optimize edilmiş SQL sorguları  
 - 📝 TypeScript ile tip güvenliği  
-- 🏗️ MVC Mimarisi  
-- ⚡ Performans optimizasyonları  
-- 🛡️ Kapsamlı hata yönetimi  
+- 🏗 MVC mimarisi ile temiz kod  
+- ⚡ Performans optimizasyonu  
+- 🛡 Kapsamlı hata yönetimi  
 
 ---
 
-## 🛠️ Teknolojiler
+## 🛠 Teknolojiler
 
 | Teknoloji | Versiyon | Açıklama |
 |-----------|----------|----------|
-| Node.js | v18+ | JavaScript runtime environment |
+| Node.js | v18+ | JavaScript runtime |
 | TypeScript | v5+ | Tip güvenli JavaScript |
 | Express.js | v4+ | Web framework |
-| Prisma ORM | v5+ | Modern ORM ve veritabanı toolkit |
+| Prisma ORM | v5+ | Modern ORM |
 | PostgreSQL | v15+ | İlişkisel veritabanı |
 | tsx | Latest | TypeScript executor |
 
 ---
 
-## 🏗️ Mimari
+## 🏗 Mimari
 
-**MVC (Model-View-Controller) yapısı kullanılmıştır:**
+**MVC (Model-View-Controller) yapısı:**
 
 📁 src/
-├── 📁 config/ # DB bağlantı ayarları
+├── 📁 config/ # DB bağlantısı ve yapılandırmalar
 ├── 📁 controllers/ # HTTP işleyicileri ve business logic
-├── 📁 models/ # Veritabanı sorguları
+├── 📁 models/ # Veritabanı işlemleri
 ├── 📁 routers/ # API endpoint yönlendirmeleri
-├── 📁 generated/ # Prisma Client (otomatik)
-└── 📄 app.ts # Ana uygulama giriş noktası
+├── 📁 generated/ # Prisma Client
+└── 📄 app.ts # Uygulama giriş noktası
 
 markdown
 Kopyala
@@ -93,15 +94,9 @@ Düzenle
 |-------|--------|----------|-----------|
 | **Category** | `id` (PK), `name`, `created_at`, `deleted_at` | Blog gönderilerini kategorize eder | 1 Category → N Post |
 | **Post** | `id` (PK), `title`, `content`, `category_id` (FK), `created_at`, `published_at`, `deleted_at` | Ana blog içerikleri | N Post → 1 Category, 1 Post → N Comment, N Post → N Tag (PostTag) |
-| **Comment** | `id` (PK), `post_id` (FK), `content`, `commenter_name`, `created_at` | Gönderilere yapılan yorumlar | N Comment → 1 Post |
+| **Comment** | `id` (PK), `post_id` (FK), `content`, `commenter_name`, `created_at` | Gönderi yorumları | N Comment → 1 Post |
 | **Tag** | `id` (PK), `name` | Gönderilere çapraz etiketleme | N Tag → N Post (PostTag) |
 | **PostTag** | `post_id` (FK), `tag_id` (FK) | Gönderi-etiket ilişkisi | Many-to-Many: Post ↔ Tag |
-
-### 🔗 İlişki Açıklaması
-
-- **Category ↔ Post**: 1 kategori → birçok gönderi, her gönderi → 1 kategori  
-- **Post ↔ Comment**: 1 gönderi → birçok yorum, her yorum → 1 gönderi  
-- **Post ↔ Tag (PostTag)**: Many-to-Many, PostTag köprü tablosu ile yönetilir  
 
 **Şematik Görünüm:**
 
@@ -130,16 +125,11 @@ Düzenle
 ### Adımlar
 
 ```bash
-# Projeyi klonla
 git clone https://github.com/kullaniciadi/prisma-blog-api.git
 cd prisma-blog-api
-
-# Bağımlılıkları yükle
 npm install
-
-# .env dosyasını oluştur
 cp .env.example .env
-Veritabanı bağlantısını .env dosyasında yapılandırın:
+.env dosyasını düzenleyin:
 
 env
 Kopyala
@@ -150,17 +140,12 @@ NODE_ENV=development
 bash
 Kopyala
 Düzenle
-# Migration çalıştır
 npx prisma migrate dev --name init
-
-# Prisma Client oluştur
 npx prisma generate
-
-# Sunucuyu başlat
 npm run dev
 🎮 Kullanım
-API http://localhost:3000 adresinde çalışır.
-Tüm endpointleri Postman veya tarayıcı üzerinden test edebilirsiniz.
+Sunucu http://localhost:3000 üzerinde çalışır.
+Postman veya tarayıcı ile endpointleri test edebilirsiniz.
 
 📡 API Endpoints
 Kaynak	Method	Endpoint	Durum
@@ -171,8 +156,6 @@ Etiketler	GET	/api/tags	🚧 Geliştiriliyor
 Yorumlar	GET	/api/comments	🚧 Geliştiriliyor
 
 🔍 Filtreleme
-Gönderiler için gelişmiş filtreleme:
-
 http
 Kopyala
 Düzenle
@@ -183,7 +166,30 @@ status	published / draft / all
 category	Kategori ID
 tags	Etiket ID’leri (OR mantığı)
 
-🗂️ Proje Yapısı
+📝 Örnek JSON İstekleri
+Yeni Kategori:
+
+h
+Kopyala
+Düzenle
+POST /api/categories
+Content-Type: application/json
+
+{
+  "name": "Teknoloji"
+}
+Yanıt:
+
+json
+Kopyala
+Düzenle
+{
+  "id": 1,
+  "name": "Teknoloji",
+  "created_at": "2025-08-25T10:30:00Z",
+  "deleted_at": null
+}
+🗂 Proje Yapısı
 arduino
 Kopyala
 Düzenle
